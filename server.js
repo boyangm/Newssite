@@ -1,7 +1,7 @@
 require("dotenv").config();
  const express = require('express');
  const axios = require('axios');
- const path = require('path')
+ const path = require('path');
  const app = express();
  newsPassword = process.env.NewsAPI_Key;
  app.use(express.json());
@@ -12,7 +12,7 @@ require("dotenv").config();
          res.json(response.data.articles);
         })
     })
-    if (process.env.NODE_env === 'production'){
+    if (process.env.NODE_ENV === 'production'){
         app.use(express.static('newssite/build'))
         app.get('*', (req, res) =>{
             res.sendFile(path.resolve(__dirname, 'newssite', 'build', 'index.html'))
