@@ -16,12 +16,12 @@ export class Provider extends Component {
     }
     render(){
         return (
-            <NewsContext.Provider value = {{}}>
+            <NewsContext.Provider value={{posts:this.state.posts}}>
             {this.props.children}
             </NewsContext.Provider>
         );
 
     }
-} 
+}  
 
 export const Consumer = NewsContext.Consumer;
