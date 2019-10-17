@@ -22,13 +22,13 @@ const style ={
             if (posts.length > 0){
                 return(
                     <div style= {style.root}>
-                    <Headline data ={posts[0]}></Headline>
+                    <Headline  index={0} data ={posts[0]}></Headline>
                     <div style= {style.content}>
-                    <Secondary data ={posts[1]}></Secondary>
-                    <Secondary data = {posts[2]}></Secondary>
+                    <Secondary index ={1} data ={posts[1]}></Secondary>
+                    <Secondary index={2} data = {posts[2]}></Secondary>
 
                     </div>
-                    <Headline data ={posts[3]}></Headline>
+                    <Headline index={3} data ={posts[3]}></Headline>
                     
                     
                     </div>

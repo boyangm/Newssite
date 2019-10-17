@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 
 const Secondary = (props) =>{
     const style = {
@@ -18,12 +19,12 @@ const Secondary = (props) =>{
         }
       }
 
-      console.log(props.urlToImage)
+      const path = `/articles/${props.index}`
     return(
         <div style = {style.div}>
         <img src={props.data.urlToImage} alt = '' style ={style.image}></img>
 
-        <h1 style = {style.title}>{props.data.title}</h1>
+        <Link to={path} style = {style.title}><h1>{props.data.title}</h1></Link>
         </div>
     )
 }

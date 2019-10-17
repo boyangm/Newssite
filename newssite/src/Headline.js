@@ -1,8 +1,11 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 
 const Headline = (props) =>{
     const style = {
-
+        div: {
+            width: '100%',
+        },
         image : {
     
           width: '100%',
@@ -11,13 +14,13 @@ const Headline = (props) =>{
            textAlign: 'center' 
         }
       }
-
+      const path = `/articles/${props.index}`
       console.log(props.urlToImage)
     return(
-        <div>
+        <div style ={style.div}>
         <img src={props.data.urlToImage} alt = '' style ={style.image}></img>
 
-        <h1 style = {style.title}>{props.data.title}</h1>
+        <Link to={path} style = {style.title}><h1>{props.data.title}</h1></Link>
         </div>
     )
 }

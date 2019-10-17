@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
+import {Link} from "react-router-dom"
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles(theme => ({
@@ -63,6 +64,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function NavBar() {
   const classes = useStyles();
+  const style = {
+      link:{
+          textDecoration:'none',
+          color: 'white'
+
+      }
+  }
 
   return (
     <div className={classes.root}>
@@ -77,7 +85,7 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+          <Link to ="/"  style={style.link}> The Daily Dally</Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
